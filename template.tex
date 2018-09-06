@@ -5,7 +5,7 @@
 
 % LAYOUT
 %--------------------------------
-\usepackage{geometry} 
+\usepackage{geometry}
 \geometry{$geometry$}
 
 % No page numbers
@@ -22,7 +22,7 @@ $endif$
 
 % TYPOGRAPHY
 %--------------------------------
-\usepackage{fontspec} 
+\usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 
@@ -109,13 +109,13 @@ $endfor$
 
 \begin{flushright}
   \small
-  $city$, \today
+  \today
 \end{flushright}
 
 \vspace{1em}
 
 
-\section*{\textsc{Invoice} \textsc{\#$invoice-nr$}}
+\section*{\textsc{Invoice}}% \textsc{\#$invoice-nr$}}
 \footnotesize
 \newcounter{pos}
 \setcounter{pos}{0}
@@ -124,11 +124,11 @@ $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
 
 \begin{spreadtab}{{tabular}[t t t]{lp{8.2cm}r}}
   \hdashline[1pt/1pt]
-  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Prices in $currency$} \\ \hline
-      $for(service)$ @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos 
-        & @ $service.description$ 
-        $if(service.details)$\newline \begin{itemize} 
-          $for(service.details)$\scriptsize \item $service.details$ 
+  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Price} \\ \hline
+      $for(service)$ @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos
+        & @ $service.description$
+        $if(service.details)$\newline \begin{itemize}
+          $for(service.details)$\scriptsize \item $service.details$
           $endfor$ \end{itemize}
           $endif$ & $service.price$\\$endfor$ \noalign{\vskip 2mm} \hline
   $if(VAT)$

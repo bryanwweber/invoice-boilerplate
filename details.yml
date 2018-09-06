@@ -1,50 +1,37 @@
 ---
-invoice-nr: 2015-11-04
-author: Max Mustermann
-city: Musterstadt
+invoice-nr: 2018-06-25
+author: Bryan Weber
 from:
-- Musterstraße 37
-- 12345 Musterstadt
+- 474 Morris Avenue
+- Providence, RI 02906
 to:
-- Erika Mustermann
-- Musterallee 1
-- 12345 Musterstadt
-- Germany
-VAT: 20
+- Lynn Brubaker
+- NumFOCUS
+- P.O. Box 90596
+- Austin, TX 78709
+VAT:
 service:
-- description: The first service provided
-  price: 320.00
+- description: NumFOCUS Cantera Small Development Grant
+  price: 2000
   details:
-- description: And another one, with a list of details
-  price: 245.00
-  details:
-    - Some more detailed explanation
-    - of the service provided
-    - Looking good
-- description: The last service provided
-  price: 65.00
 
 closingnote: |
-  Please transfer the due amount to the following bank account within the next 14 days:
-   
-    Mustermann GmbH  
-    Kreditinstitut: Deutsche Postbank AG  
-    IBAN: DE18 3601 0043 9999 9999 99  
-    BIC: PBNKDEFF  
+  Lynn,
 
-    We really appreciate your business and look forward to future projects together.
+  This is for my portion of the work on the Cantera SDG. Steven Decaluwe
+  will send you an invoice for his portion.
 
-    Best regards,
+  Thanks!
 
 # Invoice settings
-currency: EUR
+currency: USD
 # commasep: true
-lang: english
+lang: en-US
 
 # Typography and layout
 seriffont: Hoefler Text
 sansfont: Helvetica Neue
 fontsize: 10pt
-geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
+geometry: letterpaper, left=43mm, right=43mm, top=51mm, bottom=17mm
 # letterhead: true # To include personalized letterheads
 ---
